@@ -95,17 +95,16 @@
 <body>
 <div class="col-xs-12 principal">
     <div class="row">
-
+    
         <div class="col-md-6 col-sm-6 col-xs-12">
     <div class="x_panel">
         <div class="x_title">
-            <h2>Charlie</h2>
-
-                <div class="clearfix"></div>
+                <h2>Charlie</h2>
+                    <div class="clearfix"></div>
+            </div>
+                <div class="x_content">
+                    <?php include("Charlie.php");?>
                 </div>
-                    <div class="x_content">
-                        <?php include("Charlie.php");?>
-                    </div>
             </div>
         </div>
     </div>
