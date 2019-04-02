@@ -19,7 +19,7 @@ try {
 
     foreach($aContent as $sModified=>$sDirectory)
     {
-
+        
         echo "<p>Diretório: " . $sDirectory . " -> Última integração: " . $sModified . "</p>";
     }
 
