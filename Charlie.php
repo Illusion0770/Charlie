@@ -19,8 +19,9 @@ try {
 
     foreach($aContent as $sModified=>$sDirectory)
     {
-
-        echo "<p>Diretório: " . $sDirectory . " -> Última integração: " . $sModified . "</p>";
+?>
+<p>Cliente: $sDirectory -> Última integração: $sModified </p>;
+<?php
     }
 
 

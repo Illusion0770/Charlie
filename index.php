@@ -12,8 +12,9 @@
 <!--    <meta http-equiv="pragma" content="no-cache" />-->
     <title>LINVIX | Charlie</title>
     <!-- Bootstrap -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/custom.min.css" rel="stylesheet">
+<!--    <link href="css/bootstrap.min.css" rel="stylesheet">-->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://colorlib.com/polygon/build/css/custom.min.css" rel="stylesheet">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -47,35 +48,11 @@
             font-size: 25px !important;
         }
 
-        #tabelaProdutosPedido{
-            margin-bottom: 20px;
-        }
-
-        #formPrincipal {
-            display: none;
-        }
-
         .principal, body {
             background: #F7F7F7;
             min-height: 100%;
         }
 
-        .small, small {
-            font-size: 80%;
-        }
-
-        /*
-        #divDaTabela {
-            height: 400px; max-height: 500px; margin-bottom: 10px; overflow-y: scroll;
-        }
-
-        @media print {
-            #divDaTabela {
-                height: 400px; max-height: 500px; margin-bottom: 10px; overflow-y: visible;
-            }
-        }
-
-        */
         @media print {
             thead {
                 display: none;
@@ -89,6 +66,12 @@
 
         }
 
+        .x_title{
+            position: center;
+            margin-top: 20px;
+            color: #f14600;
+        }
+        
     </style>
 
 </head>
@@ -103,12 +86,13 @@
                     <div class="clearfix"></div>
             </div>
                 <div class="x_content">
-                    <?php include("Charlie.php");?>
+                    <table class="table table-bordered"><thead></thead><tbody><?php include("Charlie.php");?></tbody></table>
                 </div>
             </div>
         </div>
     </div>
 </div>
-
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 </body>
 </html>
