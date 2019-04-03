@@ -16,11 +16,12 @@ try {
     function OlderArq($diretorio){
         $dataMaisAtual = 0;
         $arquivos = glob("$diretorio/*.*", GLOB_ERR);
+
         foreach ($arquivos as $arquivo){
             $dataArq = date("Y-m-d H:i:s", filectime($arquivo));
-            if($dataArq > $dataMaisAtual){
-                $dataMaisAtual = $dataArq;
-            }
+                if($dataArq > $dataMaisAtual) {
+                    $dataMaisAtual = $dataArq;
+                }
         }
         return $dataMaisAtual;
     }
@@ -55,14 +56,24 @@ try {
         $timestampCliente = strtotime($cliente->DataModificacao);
         $diferenca = $timestampAgora - $timestampCliente;
         $diferenca = $diferenca / 3600;
-        if($diferenca > 24){
-            ?><tr><td class="Verificar"><?=basename($cliente->Cliente)?></td> <td class="Verificar">
-                <?=date_format(date_create_from_format('Y-m-d H:i:s', $cliente->DataModificacao),
-                    "d/m/Y H:i:s")?></td><td class="Verificar">Verificar</td></tr></tr><?php
-        } else if($diferenca <= 24) {
-            ?><tr><td class="Atualizado"><?=basename($cliente->Cliente)?></td> <td class="Atualizado">
-                <?=date_format(date_create_from_format('Y-m-d H:i:s', $cliente->DataModificacao),
-                    "d/m/Y H:i:s")?></td><td class="Atualizado">OK</td></tr><?php
+        if($cliente->DataModificacao) {
+            if ($diferenca > 24) {
+                ?>
+                <tr>
+                <td class="Verificar"><?= basename($cliente->Cliente) ?></td>
+                <td class="Verificar">
+                    <?= date_format(date_create_from_format('Y-m-d H:i:s', $cliente->DataModificacao),
+                        "d/m/Y H:i:s") ?></td>
+                <td class="Verificar">Verificar</td></tr></tr><?php
+            } else if ($diferenca <= 24) {
+                ?>
+                <tr>
+                <td class="Atualizado"><?= basename($cliente->Cliente) ?></td>
+                <td class="Atualizado">
+                    <?= date_format(date_create_from_format('Y-m-d H:i:s', $cliente->DataModificacao),
+                        "d/m/Y H:i:s") ?></td>
+                <td class="Atualizado">OK</td></tr><?php
+            }
         }
     }
 
