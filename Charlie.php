@@ -31,7 +31,6 @@ try {
         $sModified=date("Y-m-d H:i:s",filectime($sDirectory));
         $ObjetoClientes = new stdClass;
         $ObjetoClientes->Cliente = $sDirectory;
-//        $ObjetoClientes->DataModificacao = $sModified;
         $ObjetoClientes->DataModificacao = OlderArq($sDirectory);
         $ObjetoClientes->Ordenador = strtotime($sModified);
 
@@ -60,19 +59,20 @@ try {
             if ($diferenca > 24) {
                 ?>
                 <tr>
-                <td class="Verificar"><?= basename($cliente->Cliente) ?></td>
-                <td class="Verificar">
+                <td><?= basename($cliente->Cliente) ?></td>
+                <td>
                     <?= date_format(date_create_from_format('Y-m-d H:i:s', $cliente->DataModificacao),
                         "d/m/Y H:i:s") ?></td>
-                <td class="Verificar">Verificar</td></tr></tr><?php
+                <td class="Verificar"><strong>Verificar</strong></td>
+                </tr><?php
             } else if ($diferenca <= 24) {
                 ?>
                 <tr>
-                <td class="Atualizado"><?= basename($cliente->Cliente) ?></td>
-                <td class="Atualizado">
+                <td><?= basename($cliente->Cliente) ?></td>
+                <td>
                     <?= date_format(date_create_from_format('Y-m-d H:i:s', $cliente->DataModificacao),
                         "d/m/Y H:i:s") ?></td>
-                <td class="Atualizado">OK</td></tr><?php
+                <td class="Atualizado"><strong>OK</strong></td></tr><?php
             }
         }
     }

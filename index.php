@@ -2,6 +2,7 @@
 <html lang="pt-br">
 <head>
     <meta charset="ISO-8859-1">
+    <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, user-scalable=no">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
@@ -25,6 +26,7 @@
     <style>
         .Charlie{
             color: orangered;
+            font-family: cursive;
         }
 
         .modal table i {
@@ -53,7 +55,7 @@
         }
 
         .principal, body {
-            background: #F7F7F7;
+            background: #000000;
             min-height: 100%;
         }
 
@@ -75,13 +77,13 @@
         }
 
         .Atualizado{
-            color: #3cc401;
+            color: #00a429;
         }
 
         .x_title{
             position: center;
-            margin-top: 20px;
             color: black;
+            width: 100%;
         }
 
         .x_content{
@@ -98,7 +100,11 @@
         th{
             text-align:center;
         }
-
+        .miniLogo{
+            width: 15px;
+            position: absolute;
+            left:90%;
+        }
 
     </style>
 
@@ -108,7 +114,7 @@
     <div class="row">
         <div class="x_panel">
             <div class="x_title">
-                <h2> Monitor <tag class="Charlie">Charlie</tag> | LINVIX</h2>
+                <strong><h2>Monitor <tag class="Charlie">Charlie</tag> | LINVIX</h2></strong>
                         <div class="clearfix"></div>
                 </div>
                     <div class="x_content">
