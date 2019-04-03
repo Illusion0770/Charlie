@@ -12,17 +12,21 @@
 <!--    <meta http-equiv="pragma" content="no-cache" />-->
     <title>LINVIX | Charlie</title>
     <!-- Bootstrap -->
-<!--    <link href="css/bootstrap.min.css" rel="stylesheet">-->
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://colorlib.com/polygon/build/css/custom.min.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+<!--    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">-->
+    <link href="/css/custom.min.css" rel="stylesheet">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
     <![endif]-->
-    <link rel="icon" type="image/png" href="imgs/favicon.jpeg" />
+    <link rel="icon" type="image/png" href="imgs/logo-mini.png" />
 
     <style>
+        .Charlie{
+            color: orangered;
+        }
+
         .modal table i {
             font-size: 45px !important;
         }
@@ -66,32 +70,60 @@
 
         }
 
+        .Verificar{
+            color: red;
+        }
+
+        .Atualizado{
+            color: #3cc401;
+        }
+
         .x_title{
             position: center;
             margin-top: 20px;
-            color: #f14600;
+            color: black;
         }
-        
+
+        .x_content{
+            text-align: center;
+            color: black;
+        }
+
+        .x_panel{
+            width: 40%;
+            margin-left: 30%;
+            margin-top: 20px;
+        }
+
+        th{
+            text-align:center;
+        }
+
+
     </style>
 
 </head>
 <body>
 <div class="col-xs-12 principal">
     <div class="row">
-
-        <div class="col-md-6 col-sm-6 col-xs-12">
-    <div class="x_panel">
-        <div class="x_title">
-                <h2>Charlie</h2>
-                    <div class="clearfix"></div>
-            </div>
-                <div class="x_content">
-                    <table class="table table-bordered"><thead></thead><tbody><?php include("Charlie.php");?></tbody></table>
+        <div class="x_panel">
+            <div class="x_title">
+                <h2> Monitor <tag class="Charlie">Charlie</tag> | LINVIX</h2>
+                        <div class="clearfix"></div>
+                </div>
+                    <div class="x_content">
+                            <table class="table table-bordered">
+                                <thead>
+                                <tr><th>Cliente:</th><th> Última integração:</th><th>Status:</th></tr>
+                                </thead>
+                                <tbody>
+                                    <?php include("Charlie.php");?>
+                                </tbody>
+                            </table>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-</div>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 </body>
