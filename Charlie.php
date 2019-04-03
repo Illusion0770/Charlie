@@ -32,7 +32,7 @@ try {
         $ObjetoClientes = new stdClass;
         $ObjetoClientes->Cliente = $sDirectory;
         $ObjetoClientes->DataModificacao = OlderArq($sDirectory);
-        $ObjetoClientes->Ordenador = strtotime($sModified);
+        $ObjetoClientes->Ordenador = strtotime($ObjetoClientes->DataModificacao);
 
         $listaClientes[$contador] = $ObjetoClientes;
         $contador++;
