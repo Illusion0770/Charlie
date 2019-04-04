@@ -13,15 +13,15 @@ try {
     $listaClientes=array();
     $contador = 0;
 
-    function OlderArq($diretorio){
+    function OlderArq2($diretorio){
         $dataMaisAtual = 0;
         $arquivos = glob("$diretorio/*.*", GLOB_ERR);
 
         foreach ($arquivos as $arquivo){
             $dataArq = date("Y-m-d H:i:s", filectime($arquivo));
-                if($dataArq > $dataMaisAtual) {
-                    $dataMaisAtual = $dataArq;
-                }
+            if($dataArq > $dataMaisAtual) {
+                $dataMaisAtual = $dataArq;
+            }
         }
         return $dataMaisAtual;
     }
@@ -31,7 +31,7 @@ try {
         $sModified=date("Y-m-d H:i:s",filectime($sDirectory));
         $ObjetoClientes = new stdClass;
         $ObjetoClientes->Cliente = $sDirectory;
-        $ObjetoClientes->DataModificacao = OlderArq($sDirectory);
+        $ObjetoClientes->DataModificacao = OlderArq2($sDirectory);
         $ObjetoClientes->Ordenador = strtotime($ObjetoClientes->DataModificacao);
 
         $listaClientes[$contador] = $ObjetoClientes;
@@ -51,7 +51,7 @@ try {
     /*CONTADORES DE "VERIFICAR" & "OK"*/
     $VerificarCount=0;
     $AtualizadoCount=0;
-    /*VERIFICA SE FAZ MAIS DE 24 HORAS DESDE A ÚLTIMA INTEGRAÇÃO, MOSTRA AS INFORMAÇÕES NA TELA*/
+    /*VERIFICA SE FAZ MAIS DE 24 HORAS DESDE A ÚLTIMA INTEGRAÇÃO, CONTA QUANTOS TEM DE CADA*/
     foreach($listaClientes as $cliente)
     {
         $timestampCliente = strtotime($cliente->DataModificacao);
@@ -59,28 +59,14 @@ try {
         $diferenca = $diferenca / 3600;
         if($cliente->DataModificacao) {
             if ($diferenca > 24) {
-                $cliente->Cliente = utf8_encode($cliente->Cliente);
-                ?>
-                <tr>
-                <td><?= basename($cliente->Cliente) ?></td>
-                <td>
-                    <?= date_format(date_create_from_format('Y-m-d H:i:s', $cliente->DataModificacao),
-                        "d/m/Y H:i:s") ?></td>
-                <td class="Verificar"><strong>Verificar</strong></td>
-                </tr><?php
+                $VerificarCount++;
             } else if ($diferenca <= 24) {
-                $cliente->Cliente = utf8_encode($cliente->Cliente);
-                ?>
-                <tr>
-                <td><?= basename($cliente->Cliente) ?></td>
-                <td>
-                    <?= date_format(date_create_from_format('Y-m-d H:i:s', $cliente->DataModificacao),
-                        "d/m/Y H:i:s") ?></td>
-                <td class="Atualizado"><strong>OK</strong></td>
-                </tr><?php
+                $AtualizadoCount++;
             }
         }
     }
+
+    ?>Verificar: <?= $VerificarCount ?> Atualizado: <?= $AtualizadoCount ?><?php
 
 
 } catch (UnexpectedValueException $e) {

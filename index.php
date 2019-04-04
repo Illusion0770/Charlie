@@ -80,6 +80,10 @@
             color: #00a429;
         }
 
+        .Counter{
+
+        }
+
         .x_title{
             position: center;
             color: black;
@@ -100,10 +104,13 @@
         th{
             text-align:center;
         }
-        .miniLogo{
-            width: 15px;
-            position: absolute;
-            left:90%;
+
+        .contador{
+            color: white;
+            position: fixed;
+            margin-top: 2%;
+            margin-left: 80%;
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
         }
 
     </style>
@@ -114,7 +121,7 @@
     <div class="row">
         <div class="x_panel">
             <div class="x_title">
-                <strong><h2>Monitor <tag class="Charlie">Charlie</tag> | LINVIX</h2></strong>
+                <strong>Monitor <tag class="Charlie">Charlie</tag> | LINVIX</h2></strong>
                         <div class="clearfix"></div>
                 </div>
                     <div class="x_content">
@@ -130,6 +137,9 @@
                 </div>
             </div>
         </div>
+<div class="contador">
+    <h2><?php include("Counter.php")?></h2>
+</div>
 <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>-->
 <!--<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>-->
 </body>
