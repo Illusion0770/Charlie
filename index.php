@@ -76,6 +76,10 @@
             color: red;
         }
 
+        .Verificar2{
+            color: #f14600;
+        }
+
         .Atualizado{
             color: #00a429;
         }

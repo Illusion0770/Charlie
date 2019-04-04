@@ -58,7 +58,7 @@ try {
         $diferenca = $timestampAgora - $timestampCliente;
         $diferenca = $diferenca / 3600;
         if($cliente->DataModificacao) {
-            if ($diferenca > 24) {
+            if ($diferenca > 48) {
                 $cliente->Cliente = utf8_encode($cliente->Cliente);
                 ?>
                 <tr>
@@ -67,6 +67,16 @@ try {
                     <?= date_format(date_create_from_format('Y-m-d H:i:s', $cliente->DataModificacao),
                         "d/m/Y H:i:s") ?></td>
                 <td class="Verificar"><strong>Verificar</strong></td>
+                </tr><?php
+            } else if (24 < $diferenca && $diferenca <= 48) {
+                $cliente->Cliente = utf8_encode($cliente->Cliente);
+                ?>
+                <tr>
+                <td><?= basename($cliente->Cliente) ?></td>
+                <td>
+                    <?= date_format(date_create_from_format('Y-m-d H:i:s', $cliente->DataModificacao),
+                        "d/m/Y H:i:s") ?></td>
+                <td class="Verificar2"><strong>Verificar</strong></td>
                 </tr><?php
             } else if ($diferenca <= 24) {
                 $cliente->Cliente = utf8_encode($cliente->Cliente);
