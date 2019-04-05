@@ -38,19 +38,10 @@ try {
         $contador++;
     }
 
-    /*ORGANIZA O ARRAY DE DIRETÓRIOS POR DATA DE ALTERAÇÃO MAIS ANTIGO[0] >> MAIS NOVO[N]*/
-    for($i = 0; $i < sizeof($listaClientes); $i++){
-        for($j = 0; $j < (sizeof($listaClientes) - 1); $j++){
-            if($listaClientes[$j]->Ordenador >= $listaClientes[$j+1]->Ordenador){
-                $aux = $listaClientes[$j];
-                $listaClientes[$j] = $listaClientes[$j+1];
-                $listaClientes[$j+1] = $aux;
-            }
-        }
-    }
-    /*CONTADORES DE "VERIFICAR" & "OK"*/
+   /*CONTADORES DE "VERIFICAR" & "OK"*/
     $VerificarCount=0;
     $AtualizadoCount=0;
+
     /*VERIFICA SE FAZ MAIS DE 24 HORAS DESDE A ÚLTIMA INTEGRAÇÃO, CONTA QUANTOS TEM DE CADA*/
     foreach($listaClientes as $cliente)
     {
