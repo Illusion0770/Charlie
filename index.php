@@ -131,7 +131,7 @@
                     <div class="x_content">
                             <table class="table table-bordered">
                                 <thead>
-                                <tr><th>Cliente:</th><th> Última integração:</th><th>Status:</th></tr>
+                                <tr><th>Vínculo:</th><th>Cliente:</th><th> Última integração:</th><th>Status:</th></tr>
                                 </thead>
                                 <tbody>
                                     <?php include("Charlie.php");?>
@@ -146,5 +146,7 @@
 </div>
 <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>-->
 <!--<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>-->
+<!-- jQuery-AutoComplete -->
+<script src="/vendors/jquery.autocomplete.js"></script>
 </body>
 </html>

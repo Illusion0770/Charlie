@@ -48,6 +48,14 @@ try {
             }
         }
     }
+    /*GRAVADOR DE VÍNCULOS*/
+    function Vincular($data, $codigo)
+    {
+        $vinculos = new stdClass();
+        $vinculos->Data = $data;
+        $vinculos->codigo = $codigo;
+        print_r($vinculos);
+    }
 
     /*CONTADORES DE "VERIFICAR" & "OK"*/
     $VerificarCount=0;
@@ -58,21 +66,31 @@ try {
         $timestampCliente = strtotime($cliente->DataModificacao);
         $diferenca = $timestampAgora - $timestampCliente;
         $diferenca = $diferenca / 3600;
+
+
         if($cliente->DataModificacao) {
             if ($diferenca > 48) {
                 $cliente->Cliente = utf8_encode($cliente->Cliente);
                 ?>
                 <tr>
+                <td>
+                    <input type="text" placeholder="Vincular" name="cliente">
+                </td>
                 <td><?= basename($cliente->Cliente) ?></td>
                 <td>
                     <?= date_format(date_create_from_format('Y-m-d H:i:s', $cliente->DataModificacao),
                         "d/m/Y H:i:s") ?></td>
                 <td class="Verificar"><strong>Verificar</strong></td>
                 </tr><?php
+                $codigo = $_POST['codigo'];
+                Vincular($cliente->DataModificacao, $codigo);
             } else if (24 < $diferenca && $diferenca <= 48) {
                 $cliente->Cliente = utf8_encode($cliente->Cliente);
                 ?>
                 <tr>
+                <td>
+                    <input type="text" placeholder="Vincular" name="cliente">
+                </td>
                 <td><?= basename($cliente->Cliente) ?></td>
                 <td>
                     <?= date_format(date_create_from_format('Y-m-d H:i:s', $cliente->DataModificacao),
@@ -83,6 +101,9 @@ try {
                 $cliente->Cliente = utf8_encode($cliente->Cliente);
                 ?>
                 <tr>
+                <td>
+                    <input type="text" placeholder="Vincular" name="cliente">
+                </td>
                 <td><?= basename($cliente->Cliente) ?></td>
                 <td>
                     <?= date_format(date_create_from_format('Y-m-d H:i:s', $cliente->DataModificacao),
