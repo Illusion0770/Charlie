@@ -49,9 +49,9 @@ try {
         $diferenca = $timestampAgora - $timestampCliente;
         $diferenca = $diferenca / 3600;
         if($cliente->DataModificacao) {
-            if ($diferenca > 24) {
+            if ($diferenca > 72) {
                 $VerificarCount++;
-            } else if ($diferenca <= 24) {
+            } else if ($diferenca <= 72) {
                 $AtualizadoCount++;
             }
         }
