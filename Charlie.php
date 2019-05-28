@@ -13,7 +13,7 @@ try {
     $listaClientes=array();
     $contador = 0;
 
-    function OlderArq($diretorio){
+    function NewerArq($diretorio){
         $dataMaisAtual = 0;
         $arquivos = glob("$diretorio/*.*", GLOB_ERR);
 
@@ -31,7 +31,7 @@ try {
         $sModified=date("Y-m-d H:i:s",filectime($sDirectory));
         $ObjetoClientes = new stdClass;
         $ObjetoClientes->Cliente = $sDirectory;
-        $ObjetoClientes->DataModificacao = OlderArq($sDirectory);
+        $ObjetoClientes->DataModificacao = NewerArq($sDirectory);
         $ObjetoClientes->Ordenador = strtotime($ObjetoClientes->DataModificacao);
 
         $listaClientes[$contador] = $ObjetoClientes;
