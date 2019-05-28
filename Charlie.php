@@ -48,6 +48,7 @@ try {
             }
         }
     }
+
     /*CONTADORES DE "VERIFICAR" & "OK"*/
     $VerificarCount=0;
     $AtualizadoCount=0;
