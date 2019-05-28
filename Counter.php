@@ -51,7 +51,7 @@ try {
         if($cliente->DataModificacao) {
             if ($diferenca > 72) {
                 $VerificarCount++;
-            } else if ($diferenca <= 72 ) {
+            } else if ($diferenca <= 72) {
                 $AtualizadoCount++;
             }
         }
