@@ -77,7 +77,7 @@ try {
                     <input type="text" name="cliente" class="cliente">
                 </td>
                 <td><?= basename($cliente->Cliente) ?></td>
-                <td>
+                <td class="datasync">
                     <?= date_format(date_create_from_format('Y-m-d H:i:s', $cliente->DataModificacao),
                         "d/m/Y H:i:s") ?></td>
                 <td class="Verificar"><strong>Verificar</strong></td>
@@ -92,7 +92,7 @@ try {
                     <input type="text" name="cliente" class="cliente">
                 </td>
                 <td><?= basename($cliente->Cliente) ?></td>
-                <td>
+                <td class="datasync">
                     <?= date_format(date_create_from_format('Y-m-d H:i:s', $cliente->DataModificacao),
                         "d/m/Y H:i:s") ?></td>
                 <td class="Verificar2"><strong>Verificar</strong></td>
@@ -105,7 +105,7 @@ try {
                     <input type="text" name="cliente" class="cliente">
                 </td>
                 <td><?= basename($cliente->Cliente) ?></td>
-                <td>
+                <td class="datasync">
                     <?= date_format(date_create_from_format('Y-m-d H:i:s', $cliente->DataModificacao),
                         "d/m/Y H:i:s") ?></td>
                 <td class="Atualizado"><strong>OK</strong></td>

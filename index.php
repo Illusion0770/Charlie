@@ -117,10 +117,11 @@
             font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
         }
         .sync{
-            color: black;
-            margin-top: -24px;
+            color: white;
+            margin-top: -20pt;
             margin-right: 220px;
             font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+            border-color: transparent;
         }
 
         .cliente{
@@ -140,7 +141,7 @@
             <div class="x_title">
                 <strong>Monitor <tag class="Charlie">Charlie</tag> | LINVIX</h2></strong>
                         <div class="clearfix"></div>
-                <button type="submit" class="sync pull-right" id="sync">Sincronizar</button>
+                <button type="submit" class="sync btn btn-primary pull-right" id="sync">Sincronizar</button>
                 <div class="contador">
                     <h2><?php include("Counter.php")?></h2>
                 </div>
@@ -163,6 +164,7 @@
 <!--<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>-->
 <!-- jQuery-AutoComplete -->
 <script src="/vendors/jquery.autocomplete.js"></script>
+<script src="/vendors/pnotify/dist/pnotify.js"></script>
 <script src="/js/ListaClientes.js"></script>
 <script src="/js/sync.js"></script>
 </body>
