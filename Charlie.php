@@ -74,7 +74,7 @@ try {
                 ?>
                 <tr>
                 <td>
-                    <input type="text" placeholder="Vincular" name="cliente">
+                    <input type="text" name="cliente" class="cliente">
                 </td>
                 <td><?= basename($cliente->Cliente) ?></td>
                 <td>
@@ -89,7 +89,7 @@ try {
                 ?>
                 <tr>
                 <td>
-                    <input type="text" placeholder="Vincular" name="cliente">
+                    <input type="text" name="cliente" class="cliente">
                 </td>
                 <td><?= basename($cliente->Cliente) ?></td>
                 <td>
@@ -102,7 +102,7 @@ try {
                 ?>
                 <tr>
                 <td>
-                    <input type="text" placeholder="Vincular" name="cliente">
+                    <input type="text" name="cliente" class="cliente">
                 </td>
                 <td><?= basename($cliente->Cliente) ?></td>
                 <td>

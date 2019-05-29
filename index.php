@@ -100,8 +100,8 @@
         }
 
         .x_panel{
-            width: 40%;
-            margin-left: 30%;
+            width: 1100px;
+            margin-left: 8%;
             margin-top: 20px;
         }
 
@@ -110,23 +110,40 @@
         }
 
         .contador{
-            color: white;
-            position: fixed;
-            margin-top: 2%;
-            margin-left: 80%;
+            color: black;
+            position: absolute;
+            margin-top: -24px;
+            margin-left: 77%;
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        }
+        .sync{
+            color: black;
+            margin-top: -24px;
+            margin-right: 220px;
             font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
         }
 
+        .cliente{
+            width: 500px;
+            margin: -10px -125px -10px -125px;
+            height: 30px;
+            background-color: transparent;
+            border-color: transparent;
+        }
     </style>
 
 </head>
 <body>
-<div class="col-xs-12 principal">
+<div class="col-xs-12">
     <div class="row">
         <div class="x_panel">
             <div class="x_title">
                 <strong>Monitor <tag class="Charlie">Charlie</tag> | LINVIX</h2></strong>
                         <div class="clearfix"></div>
+                <button type="submit" class="sync pull-right" id="sync">Sincronizar</button>
+                <div class="contador">
+                    <h2><?php include("Counter.php")?></h2>
+                </div>
                 </div>
                     <div class="x_content">
                             <table class="table table-bordered">
@@ -141,12 +158,12 @@
                 </div>
             </div>
         </div>
-<div class="contador">
-    <h2><?php include("Counter.php")?></h2>
-</div>
+<script src="/vendors/jquery-3.3.1/jquery-3.3.1.min.js"></script>
 <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>-->
 <!--<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>-->
 <!-- jQuery-AutoComplete -->
 <script src="/vendors/jquery.autocomplete.js"></script>
+<script src="/js/ListaClientes.js"></script>
+<script src="/js/sync.js"></script>
 </body>
 </html>
