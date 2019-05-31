@@ -55,7 +55,8 @@
         }
 
         .principal, body {
-            background: #000000;
+            /*background: #000000;*/
+            background: #eceff1 !important;
             min-height: 100%;
         }
 
@@ -131,6 +132,8 @@
             background-color: transparent;
             border-color: transparent;
         }
+
+
     </style>
 
 </head>
@@ -147,9 +150,9 @@
                 </div>
                 </div>
                     <div class="x_content">
-                            <table class="table table-bordered">
+                            <table id="TabelaListaBackup" class="table table-bordered">
                                 <thead>
-                                <tr><th>Vínculo:</th><th>Cliente:</th><th> Última integração:</th><th>Status:</th></tr>
+                                <tr><th>Vínculo:</th><th>Pasta:</th><th> Última leitura:</th><th>Status:</th></tr>
                                 </thead>
                                 <tbody>
                                     <?php include("Charlie.php");?>

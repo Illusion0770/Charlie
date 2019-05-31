@@ -54,7 +54,6 @@ try {
         $vinculos = new stdClass();
         $vinculos->Data = $data;
         $vinculos->codigo = $codigo;
-        print_r($vinculos);
     }
 
     /*CONTADORES DE "VERIFICAR" & "OK"*/
@@ -76,7 +75,7 @@ try {
                 <td>
                     <input type="text" name="cliente" class="cliente">
                 </td>
-                <td><?= basename($cliente->Cliente) ?></td>
+                <td class="pastas"><?= basename($cliente->Cliente) ?></td>
                 <td class="datasync">
                     <?= date_format(date_create_from_format('Y-m-d H:i:s', $cliente->DataModificacao),
                         "d/m/Y H:i:s") ?></td>
@@ -91,7 +90,7 @@ try {
                 <td>
                     <input type="text" name="cliente" class="cliente">
                 </td>
-                <td><?= basename($cliente->Cliente) ?></td>
+                <td class="pastas"><?= basename($cliente->Cliente) ?></td>
                 <td class="datasync">
                     <?= date_format(date_create_from_format('Y-m-d H:i:s', $cliente->DataModificacao),
                         "d/m/Y H:i:s") ?></td>
@@ -104,7 +103,7 @@ try {
                 <td>
                     <input type="text" name="cliente" class="cliente">
                 </td>
-                <td><?= basename($cliente->Cliente) ?></td>
+                <td class="pastas"><?= basename($cliente->Cliente) ?></td>
                 <td class="datasync">
                     <?= date_format(date_create_from_format('Y-m-d H:i:s', $cliente->DataModificacao),
                         "d/m/Y H:i:s") ?></td>

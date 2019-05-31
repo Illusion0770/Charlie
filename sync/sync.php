@@ -1,7 +1,12 @@
 <?php
 
-$clientes[] = json_decode($_POST['clientes']);
+$clientes = $_POST['clientes'];
 
-var_dump($clientes);
+$ArquivoSync = '../json/ArquivoSyncCharlie.json';
 
-echo 'Sincronizando';
+$fp = fopen($ArquivoSync,'w+');
+
+fwrite($fp, '');
+fwrite($fp, $clientes);
+
+fclose($fp);
