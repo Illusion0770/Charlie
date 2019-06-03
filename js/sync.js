@@ -13,9 +13,14 @@ function Sync(){
         ObjetoCliente.pasta =  $(this).find('.pastas').text();
         ObjetoCliente.codigocliente = ArrayCliente[0];
         ObjetoCliente.nomecliente = ArrayCliente[1];
+        if(ObjetoCliente.nomecliente === undefined){
+            ObjetoCliente.nomecliente = '';
+            ObjetoCliente.codigocliente = '';
+        }
         ObjetoCliente.data = data;
         clientes[contador] = ObjetoCliente;
         contador++;
+        console.log(clientes);
     });
 
     $.ajax({

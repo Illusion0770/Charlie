@@ -5,22 +5,11 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, user-scalable=no">
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-<!--    <meta http-equiv="cache-control" content="max-age=0" />-->
-<!--    <meta http-equiv="cache-control" content="no-cache" />-->
-<!--    <meta http-equiv="expires" content="0" />-->
-<!--    <meta http-equiv="expires" content="Tue, 01 Jan 1980 1:00:00 GMT" />-->
-<!--    <meta http-equiv="pragma" content="no-cache" />-->
     <title>LINVIX | Charlie</title>
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
-<!--    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">-->
     <link href="/css/custom.min.css" rel="stylesheet">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-    <![endif]-->
     <link rel="icon" type="image/png" href="imgs/logo-mini.png" />
 
     <style>
@@ -35,7 +24,7 @@
 
         p {
             line-height: 20px !important;
-            margin-bottom: 0px;
+            margin-bottom: 0    ;
         }
 
         #tabelaClientes td i {
@@ -163,9 +152,6 @@
             </div>
         </div>
 <script src="/vendors/jquery-3.3.1/jquery-3.3.1.min.js"></script>
-<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>-->
-<!--<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>-->
-<!-- jQuery-AutoComplete -->
 <script src="/vendors/jquery.autocomplete.js"></script>
 <script src="/vendors/pnotify/dist/pnotify.js"></script>
 <script src="/js/ListaClientes.js"></script>
