@@ -78,7 +78,7 @@ try {
                 ?>
                 <tr>
                 <td>
-                    <input type="text" name="cliente" class="cliente" value="<?=$test['codigocliente'] . ' ' . $test['nomecliente']?>">
+                    <input type="text" name="cliente" class="cliente" value="<?=$test['codigocliente'] . ' - ' . $test['nomecliente']?>">
                 </td>
                 <td class="pastas"><?= basename($cliente->Cliente) ?></td>
                 <td class="datasync">
@@ -92,7 +92,7 @@ try {
                 ?>
                 <tr>
                 <td>
-                    <input type="text" name="cliente" class="cliente" placeholder="<?=$test['codigocliente'] . ' ' . $test['nomecliente']?>">
+                    <input type="text" name="cliente" class="cliente" placeholder="<?=$test['codigocliente'] . ' - ' . $test['nomecliente']?>">
                 </td>
                 <td class="pastas"><?= basename($cliente->Cliente) ?></td>
                 <td class="datasync">
@@ -106,7 +106,7 @@ try {
                 ?>
                 <tr>
                 <td>
-                    <input type="text" name="cliente" class="cliente" placeholder="<?=$test['codigocliente'] . ' ' . $test['nomecliente']?>">                 </td>
+                    <input type="text" name="cliente" class="cliente" placeholder="<?=$test['codigocliente'] . ' - ' . $test['nomecliente']?>">                 </td>
                 <td class="pastas"><?= basename($cliente->Cliente) ?></td>
                 <td class="datasync">
                     <?= date_format(date_create_from_format('Y-m-d H:i:s', $cliente->DataModificacao),
