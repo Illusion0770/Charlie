@@ -4,7 +4,7 @@ $clientes = $_POST['clientes'];
 
 $ArquivoSync = '../json/ArquivoSyncCharlie.json';
 
-$fp = fopen($ArquivoSync,'w+');
+$fp = fopen($ArquivoSync,'a+');
 
 fwrite($fp, '');
 fwrite($fp, $clientes);

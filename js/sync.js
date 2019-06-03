@@ -9,10 +9,11 @@ function Sync(){
         var cliente = $(this).find('.cliente').val();
         var ArrayCliente = cliente.split(' - ');
         var ObjetoCliente = {};
+        var data = $(this).find('.datasync').text();
         ObjetoCliente.pasta =  $(this).find('.pastas').text();
         ObjetoCliente.codigocliente = ArrayCliente[0];
         ObjetoCliente.nomecliente = ArrayCliente[1];
-
+        ObjetoCliente.data = data;
         clientes[contador] = ObjetoCliente;
         contador++;
     });

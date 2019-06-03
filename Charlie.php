@@ -49,11 +49,11 @@ try {
         }
     }
     /*GRAVADOR DE VÍNCULOS*/
-    function Vincular($data, $codigo)
+    function Vincular($data)
     {
         $vinculos = new stdClass();
         $vinculos->Data = $data;
-        $vinculos->codigo = $codigo;
+//        $vinculos->codigo = $codigo;
     }
 
     /*CONTADORES DE "VERIFICAR" & "OK"*/
@@ -81,8 +81,8 @@ try {
                         "d/m/Y H:i:s") ?></td>
                 <td class="Verificar"><strong>Verificar</strong></td>
                 </tr><?php
-                $codigo = $_POST['codigo'];
-                Vincular($cliente->DataModificacao, $codigo);
+//                $codigo = $_POST['codigo'];
+                Vincular($cliente->DataModificacao);
             } else if (24 < $diferenca && $diferenca <= 48) {
                 $cliente->Cliente = utf8_encode($cliente->Cliente);
                 ?>

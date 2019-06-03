@@ -4,7 +4,6 @@
     <list default="true" id="714c1929-8a27-416a-a643-0bb9bc4ffec7" name="Default" comment="difficult times">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Charlie.php" beforeDir="false" afterPath="$PROJECT_DIR$/Charlie.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/sync.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/sync.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sync/sync.php" beforeDir="false" afterPath="$PROJECT_DIR$/sync/sync.php" afterDir="false" />
     </list>
@@ -22,28 +21,28 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sync/sync.php">
+        <entry file="file://$PROJECT_DIR$/js/sync.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="11" column="12" lean-forward="true" selection-start-line="11" selection-start-column="12" selection-end-line="11" selection-end-column="12" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Charlie.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="552">
-              <caret line="85" column="1" lean-forward="true" selection-start-line="85" selection-start-column="1" selection-end-line="85" selection-end-column="1" />
+            <state relative-caret-position="225">
+              <caret line="15" column="34" selection-start-line="15" selection-start-column="34" selection-end-line="15" selection-end-column="34" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/sync.js">
+        <entry file="file://$PROJECT_DIR$/Charlie.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="537">
-              <caret line="39" selection-start-line="39" selection-end-line="39" />
+            <state relative-caret-position="240">
+              <caret line="56" column="5" selection-start-line="56" selection-start-column="5" selection-end-line="56" selection-end-column="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/sync/sync.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="75">
+              <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
             </state>
           </provider>
         </entry>
@@ -51,7 +50,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1247">
+            <state relative-caret-position="15">
               <caret line="58" column="43" selection-start-line="58" selection-start-column="43" selection-end-line="58" selection-end-column="43" />
             </state>
           </provider>
@@ -86,10 +85,10 @@
         <option value="$PROJECT_DIR$/Counter.php" />
         <option value="$PROJECT_DIR$/ListaClientes.js" />
         <option value="$PROJECT_DIR$/js/ListaClientes.js" />
-        <option value="$PROJECT_DIR$/js/sync.js" />
         <option value="$PROJECT_DIR$/index.php" />
-        <option value="$PROJECT_DIR$/sync/sync.php" />
         <option value="$PROJECT_DIR$/Charlie.php" />
+        <option value="$PROJECT_DIR$/js/sync.js" />
+        <option value="$PROJECT_DIR$/sync/sync.php" />
       </list>
     </option>
   </component>
@@ -113,6 +112,16 @@
               <item name="Charlie_2.0" type="b2602c69:ProjectViewProjectNode" />
               <item name="Charlie_2.0" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="Charlie_2.0" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Charlie_2.0" type="462c0819:PsiDirectoryNode" />
+              <item name="json" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Charlie_2.0" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Charlie_2.0" type="462c0819:PsiDirectoryNode" />
+              <item name="sync" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -135,6 +144,11 @@
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/js" />
     </key>
+  </component>
+  <component name="RunAnythingCache">
+    <option name="myCommands">
+      <command value="php -S localhost:8080" />
+    </option>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -192,7 +206,8 @@
       <workItem from="1559063309432" duration="5315000" />
       <workItem from="1559130373893" duration="12477000" />
       <workItem from="1559150286751" duration="5974000" />
-      <workItem from="1559302760240" duration="1166000" />
+      <workItem from="1559302760240" duration="5156000" />
+      <workItem from="1559328261887" duration="886000" />
     </task>
     <task id="LOCAL-00001" summary="Things">
       <created>1559047750785</created>
@@ -250,22 +265,29 @@
       <option name="project" value="LOCAL" />
       <updated>1559137807415</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="difficult times">
+      <created>1559304137368</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1559304137368</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="95000000" />
+    <option name="totallyTimeSpent" value="99876000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1366" height="768" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21060605" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21363637" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32911393" />
-      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32911393" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -349,9 +371,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/json/sync.json" />
     <entry file="file://$PROJECT_DIR$/json/syncArquivado" />
-    <entry file="file://$PROJECT_DIR$/json/ArquivoSyncCharlie.json">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/css/menu.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1563" />
@@ -359,29 +378,32 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/js/sync.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="537">
-          <caret line="39" selection-start-line="39" selection-end-line="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sync/sync.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="12" lean-forward="true" selection-start-line="11" selection-start-column="12" selection-end-line="11" selection-end-column="12" />
+        <state relative-caret-position="225">
+          <caret line="15" column="34" selection-start-line="15" selection-start-column="34" selection-end-line="15" selection-end-column="34" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1247">
+        <state relative-caret-position="15">
           <caret line="58" column="43" selection-start-line="58" selection-start-column="43" selection-end-line="58" selection-end-column="43" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Charlie.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="552">
-          <caret line="85" column="1" lean-forward="true" selection-start-line="85" selection-start-column="1" selection-end-line="85" selection-end-column="1" />
+        <state relative-caret-position="240">
+          <caret line="56" column="5" selection-start-line="56" selection-start-column="5" selection-end-line="56" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/json/ArquivoSyncCharlie.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sync/sync.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
         </state>
       </provider>
     </entry>
