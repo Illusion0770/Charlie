@@ -10,3 +10,5 @@ fwrite($fp, '');
 fwrite($fp, $clientes);
 
 fclose($fp);
+
+echo $clientes;

@@ -51,6 +51,7 @@ try {
     /*DA O NOME AOS PLACEHOLDERS DOS INPUTS DE NOME */
     $json_dataCounter = 0;
     $json_data = json_decode(file_get_contents('json/ArquivoSyncCharlie.json', true));
+//    print_r($json_data);
     $json_data_object = $json_data[$json_dataCounter];
     $test = get_object_vars($json_data_object);
 //    print_r($test['codigocliente'] .' - '. $test['nomecliente']);
@@ -70,7 +71,6 @@ try {
         if($test['codigocliente'] === ''){
             $test['nomecliente']    = '';
             $test['codigocliente']  = '';
-
         }
         if($cliente->DataModificacao) {
             if ($diferenca > 48) {
@@ -82,8 +82,8 @@ try {
                 </td>
                 <td class="pastas"><?= basename($cliente->Cliente) ?></td>
                 <td class="datasync">
-                    <?= date_format(date_create_from_format('Y-m-d H:i:s', $cliente->DataModificacao),
-                        "d/m/Y H:i:s") ?></td>
+                    <?= date_format(date_create_from_format('Y-m-d H:i:s', $cliente->DataModificacao),"d/m/Y H:i:s") ?>
+                </td>
                 <td class="Verificar"><strong>Verificar</strong></td>
                 </tr><?php
                 $json_dataCounter++;
@@ -96,8 +96,8 @@ try {
                 </td>
                 <td class="pastas"><?= basename($cliente->Cliente) ?></td>
                 <td class="datasync">
-                    <?= date_format(date_create_from_format('Y-m-d H:i:s', $cliente->DataModificacao),
-                        "d/m/Y H:i:s") ?></td>
+                    <?= date_format(date_create_from_format('Y-m-d H:i:s', $cliente->DataModificacao),"d/m/Y H:i:s") ?>
+                </td>
                 <td class="Verificar2"><strong>Verificar</strong></td>
                 </tr><?php
                 $json_dataCounter++;
@@ -109,8 +109,8 @@ try {
                     <input type="text" name="cliente" class="cliente" placeholder="<?=$test['codigocliente'] . ' - ' . $test['nomecliente']?>">                 </td>
                 <td class="pastas"><?= basename($cliente->Cliente) ?></td>
                 <td class="datasync">
-                    <?= date_format(date_create_from_format('Y-m-d H:i:s', $cliente->DataModificacao),
-                        "d/m/Y H:i:s") ?></td>
+                    <?=date_format(date_create_from_format('Y-m-d H:i:s', $cliente->DataModificacao),"d/m/Y H:i:s")?>
+                </td>
                 <td class="Atualizado"><strong>OK</strong></td>
                 </tr><?php
                 $json_dataCounter++;
