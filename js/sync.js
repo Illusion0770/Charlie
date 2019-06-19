@@ -3,8 +3,10 @@ $('#sync').on('click', function(){
 });
 
 $(document).ready(function(){
-    SyncExterno();
+    Sync();
+
 });
+
 
 function Sync(){
     var clientes = [];

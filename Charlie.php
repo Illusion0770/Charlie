@@ -10,17 +10,16 @@ try {
 
     /*CRIA ARRAY DE DIRETÓRIOS COM A ÚLTIMA DATA DE ALTERAÇÃO*/
 
-    $aDirectories=glob("FTP/*",GLOB_ONLYDIR);
-
-    $listaClientes=array();
-    $contador = 0;
+    $aDirectories   = glob("FTP/*",GLOB_ONLYDIR);
+    $listaClientes  = array();
+    $contador       = 0;
 
     function NewerArq($diretorio){
-        $dataMaisAtual = 0;
-        $arquivos = glob("$diretorio/*.*", GLOB_ERR);
+        $dataMaisAtual  = 0;
+        $arquivos       = glob("$diretorio/*.*", GLOB_ERR);
 
         foreach ($arquivos as $arquivo){
-            $dataArq = date("Y-m-d H:i:s", filectime($arquivo));
+            $dataArq = date("Y-m-d H:i:s", fileatime($arquivo));
                 if($dataArq > $dataMaisAtual) {
                     $dataMaisAtual = $dataArq;
                 }
@@ -30,13 +29,12 @@ try {
 
     foreach($aDirectories as $sDirectory){
 
-        $sModified=date("Y-m-d H:i:s",filectime($sDirectory));
-        $ObjetoClientes = new stdClass;
-        $ObjetoClientes->Cliente = $sDirectory;
-        $ObjetoClientes->DataModificacao = NewerArq($sDirectory);
-        $ObjetoClientes->Ordenador = strtotime($ObjetoClientes->DataModificacao);
-
-        $listaClientes[$contador] = $ObjetoClientes;
+        $sModified                          = date("Y-m-d H:i:s",filectime($sDirectory));
+        $ObjetoClientes                     = new stdClass;
+        $ObjetoClientes->Cliente            = $sDirectory;
+        $ObjetoClientes->DataModificacao    = NewerArq($sDirectory);
+        $ObjetoClientes->Ordenador          = strtotime($ObjetoClientes->DataModificacao);
+        $listaClientes[$contador]           = $ObjetoClientes;
         $contador++;
     }
 
@@ -45,15 +43,15 @@ try {
     for($i = 0; $i < sizeof($listaClientes); $i++){
         for($j = 0; $j < (sizeof($listaClientes) - 1); $j++){
             if($listaClientes[$j]->Ordenador >= $listaClientes[$j+1]->Ordenador){
-                $aux = $listaClientes[$j];
-                $listaClientes[$j] = $listaClientes[$j+1];
-                $listaClientes[$j+1] = $aux;
+                $aux                    = $listaClientes[$j];
+                $listaClientes[$j]      = $listaClientes[$j+1];
+                $listaClientes[$j+1]    = $aux;
             }
         }
     }
 
     /*DA O NOME AOS PLACEHOLDERS DOS INPUTS DE NOME */
-
+//
     $json_dataCounter   = 0;
     $json_data          = json_decode(file_get_contents('json/ArquivoSyncCharlie.json', true));
     $json_data_object   = $json_data[$json_dataCounter];
@@ -82,14 +80,14 @@ try {
             $array_compared_object = array();
 
             for($i = 0; $i < sizeof($json_data); $i++){
-                $json_data = json_decode(file_get_contents('json/ArquivoSyncCharlie.json', true));
-                $json_data_object = $json_data[$i];
-                $test = get_object_vars($json_data_object);
-                $compared_object = new stdClass();
-                $compared_object->Nome = $test['nomecliente'];
-                $compared_object->Codigo = $test['codigocliente'];
-                $compared_object->Pasta = $test['pasta'];
-                $array_compared_object[$i] = $compared_object;
+                $json_data                  = json_decode(file_get_contents('json/ArquivoSyncCharlie.json', true));
+                $json_data_object           = $json_data[$i];
+                $test                       = get_object_vars($json_data_object);
+                $compared_object            = new stdClass();
+                $compared_object->Nome      = $test['nomecliente'];
+                $compared_object->Codigo    = $test['codigocliente'];
+                $compared_object->Pasta     = $test['pasta'];
+                $array_compared_object[$i]  = $compared_object;
             }
 
             if ($diferenca > 48) {

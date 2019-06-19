@@ -5,7 +5,10 @@
  * Date: 27/03/19
  * Time: 16:19
  */
+
 $timestampAgora = time();
+date_default_timezone_set('America/Sao_Paulo');
+
 try {
     /*CRIA ARRAY DE DIRETÓRIOS COM A ÚLTIMA DATA DE ALTERAÇÃO*/
     $aDirectories=glob("FTP/*",GLOB_ONLYDIR);
